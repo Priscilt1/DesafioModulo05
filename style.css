@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
     margin: 0;
@@ -15,15 +15,27 @@ body {
 header {
     box-sizing: border-box;
     text-align: center;
-    margin-top: 32px;
+    padding: 32px;
+    background-color: white;
+    height: 15vh;
 }
 
+
 .links a {
-    color: white;
+    color: #777;
     text-decoration: none;
-    font-weight: bold;
     font-size: 30px;
     position: relative;
+}
+
+.links a:hover {
+    color: #5A13F2;
+}
+
+
+.links a.active {
+    font-weight: bold;
+    color: black;
 }
 
 .links a + a {
