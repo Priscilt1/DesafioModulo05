@@ -7,35 +7,38 @@
 }
 
 body {
-    background: linear-gradient(329.54deg, #C004D9 0%, #5A13F2 100%) no-repeat; 
+    background: url(ceu.png) no-repeat;
     font-family: 'roboto';
-    height: 100vh;
+    background-size: 80%;
+    background-color: #193f62;
+    background-position-x: center;
 }
 
 header {
     box-sizing: border-box;
     text-align: center;
-    padding: 32px;
-    background-color: white;
-    height: 15vh;
+    padding: 36px;
+    background-color: #f8f6f6;
 }
 
-
 .links a {
-    color: #777;
+    /* color: #7F3BF7;    */
+    color: #00afef;
     text-decoration: none;
     font-size: 30px;
+    /* position relative para fixar e aplicar a animação do after */
     position: relative;
 }
 
 .links a:hover {
-    color: #5A13F2;
+    color: black;
 }
 
 
 .links a.active {
     font-weight: bold;
-    color: black;
+    color: #e27c48;
+    text-transform: uppercase;
 }
 
 .links a + a {
@@ -44,9 +47,9 @@ header {
 
 .links a::after {
     content: "";
-    height: 2px;
+    height: 3px;
     width: 0;
-    background-color: #138AF2;
+    background-color: black;
     position: absolute;
     left: 0;
     bottom: -2px;
