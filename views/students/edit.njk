@@ -13,10 +13,8 @@
                 <form method="POST" action="/students?_method=PUT">
                 <h3>Editar Estudante</h3>
 
-                {# o include inclui um arquivo externo de bloco de codigo #}
                 {% include 'students/fields.njk'%}
 
-                {# incluindo o id de forma oculta no front-end #}
                 <input 
                     type="hidden" 
                     name="id" 
@@ -24,14 +22,9 @@
                 >
             </form>
 
-            <form id="form-delete" action="/students?_method=DELETE" method="post">
-                <input type="hidden" name="id" value={{student.id}}>
-                <button type="submit">Deletar</button>
-            </form>
-
+           
         </section>
 
-        <script src="/mensagedelet.js"></script>
 
 </div>
 

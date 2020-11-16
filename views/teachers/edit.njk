@@ -13,10 +13,8 @@
                 <form method="POST" action="/teachers?_method=PUT">
                 <h3>Editar Professor</h3>
 
-                {# o include inclui um arquivo externo de bloco de codigo #}
                 {% include 'teachers/fields.njk'%}
 
-                {# incluindo o id de forma oculta no front-end #}
                 <input 
                     type="hidden" 
                     name="id" 

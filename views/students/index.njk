@@ -4,30 +4,24 @@
 {% block content %}
 <div class="card table-container">
     <a href="/students/create">Novo Estudante</a>
-    <table> {# tabela #}
-        <thead> {# thead - cabeçalho #}
-            <tr> {# linha é a <tr> #}
-                {# coluna é a <th> #}
-                <th>Membro</th>
+    <table> 
+        <thead> 
+            <tr> 
+                <th>Estudante</th>
                 <th>Email</th>
-                <th>Peso</th>
-                <th>Altura</th>
-                <th>Aniversario</th>
+                <th>Ano escolar</th>
                 <th>Ação</th>
 
             </tr>
         </thead>
 
-        <tbody> {# corpo da tabela #}
+        <tbody> 
             {% for student in students %}
                 <tr>
-                    {# coluna é a <td> #}
                     <td><span style="background-image: url({{student.avatar_url}})"></span>
                         {{student.name}}</td>   
                     <td>{{student.email}}</td>                           
-                    <td>{{student.weight}}kg</td>                           
-                    <td>{{student.height}}cm</td>
-                                        <td>{{student.birth}}</td>                           
+                    <td>{{student.schoolyear}}</td>                           
                            
 
                     <td> <a href="/students/{{student.id}}">Ver detalhes</a> </td>

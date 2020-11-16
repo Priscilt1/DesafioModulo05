@@ -18,38 +18,36 @@
             <div>{{ student.name }}</div>
         </div>
 
-          <div class="item">
-            <div>Email</div>
-            <div>{{ student.email }}</div>
-        </div>
-
         <div class="item">
             <div>Aniversário</div>
             <div>{{ student.birth }}</div>
         </div>
 
-        <div class="item">
-            <div>Sexo</div>
-            <div>{{ "Masculino" if student.gender == "M" else "Feminino"}}</div>
+          <div class="item">
+            <div>Email</div>
+            <div>{{ student.email }}</div>
+        </div>
+
+         <div class="item">
+            <div>Ano escolar </div>
+            <div>{{ student.schoolyear }}</div>
         </div>
 
         <div class="item">
-            <div>Tipo Sanguíneo</div>
-            <div>{{ student.blood }}</div>
+            <div>Carga horária semanal</div>
+            <div>{{ student.workload}}</div>
         </div>
 
-        <div class="item">
-            <div>Peso (kg)</div>
-            <div>{{ student.weight }}</div>
-        </div>
-
+        <form id="form-delete" action="/students?_method=DELETE" method="post">
+            <input type="hidden" name="id" value={{student.id}}>
+                <div id="buttons">
+            <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
+            <button type="submit">Deletar</button>
+            </div>
+        </form>
         
-        <div class="item">
-            <div>Altura (cm)</div>
-            <div>{{ student.height }}</div>
-        </div>
+        <script src="/mensagedelet.js"></script>
         
-        <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
 
     </section>
 

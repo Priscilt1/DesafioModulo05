@@ -1,13 +1,14 @@
 const fs = require('fs')
 const data = require("../data.json")
-const { date } = require('../utils')
+const { date, grade } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function (req, res) {
     const students = data.students.map(student => {
         return { 
             ...student,
-            birth: date(student.birth).birthDay
+            birth: date(student.birth).birthDay,
+            schoolyear: grade (student.schoolyear)
         }
     })
     return res.render("students/index", {students: students})
@@ -55,6 +56,7 @@ exports.show = function (req, res) {
     })
 
     if (!foundStudent) return res.send("Aluno não encontrado!")
+
 
     const student = {
         ...foundStudent,

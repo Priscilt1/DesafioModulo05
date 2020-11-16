@@ -10,22 +10,13 @@
 </div>
 
 <div class="item">
-    <div>Nome</div>
+    <div>Nome completo</div>
     <div>
         <input 
             type="text" 
             name="name" 
+            placeholder="Nome do Aluno" 
             value="{{ student.name }}">
-    </div>
-</div>
-
-<div class="item">
-    <div>Email</div>
-    <div>
-        <input 
-            type="email" 
-            name="email" 
-            value="{{ student.email }}">
     </div>
 </div>
 
@@ -40,81 +31,64 @@
 </div>
 
 <div class="item">
-    <div>Sexo</div>
+    <div>Email</div>
     <div>
-        {# o checked torna a selecao obrigatoria #}
-        <span>
-            <input 
-                type="radio" 
-                name="gender" 
-                value="M" 
-                {% if student.gender == 'M'%} 
-                    checked=
-                {% endif %}> Masculino
-        </span>
-        <span>
-            <input 
-                type="radio" 
-                name="gender" 
-                value="F"
-                {% if student.gender == 'F'%} 
-                    checked=    
-                {% endif %}> Feminino
-        </span>
+        <input 
+            type="email" 
+            name="email" 
+            value="{{ student.email }}">
     </div>
 </div>
 
 <div class="item">
-    <div>Tipo sanguíneo</div>
+    <div>Ano escolar </div>
     <div>
-        <select name="blood">
-            <option value="A+"
-                {% if student.blood == "A+"%}selected{%endif%}}>A+
-            </option>
-            <option value="A-"
-                {% if student.blood == "A-"%}selected{%endif%}}>A-
-            </option>
-            <option value="B+"
-                {% if student.blood == " B+"%}selected{%endif%}}>B+
-            </option>
-            <option value="B-"
-                {% if student.blood == "B-"%}selected{%endif%}}>B-
-            </option>
-            <option value="AB+"
-                {% if student.blood == "AB+"%}selected{%endif%}}>AB+
-            </option>
-            <option value="AB-"
-                {% if student.blood == "AB-"%}selected{%endif%}}>AB-
-            </option>
-            <option value="O+"
-                {% if student.blood == "O+"%}selected{%endif%}}>O+
-            </option>
-            <option value="O-"
-                {% if student.blood == "O-"%}selected{%endif%}}>O-
-            </option>
+        <select name="schoolyear">
+            <option value="5"
+            {% if student.schooling == "5"%}selected{%endif%}}
+            >5º Ano</option>
+
+             <option value="6"
+            {% if teacher.schooling == "6"%}selected{%endif%}}
+            >6º Ano</option>
+
+             <option value="7"
+            {% if teacher.schooling == "7"%}selected{%endif%}}
+            >7º Ano</option>
+
+             <option value="8"
+            {% if teacher.schooling == "8"%}selected{%endif%}}
+            >8º Ano</option>
+
+            <option value="9"
+            {% if teacher.schooling == "9"%}selected{%endif%}}
+            >9º Ano</option>
+
+            <option value="1"
+            {% if teacher.schooling == "1"%}selected{%endif%}}
+            >1º Ano</option>
+
+            <option value="2"
+            {% if teacher.schooling == "2"%}selected{%endif%}}
+            >2º Ano</option>
+
+            <option value="3"
+            {% if teacher.schooling == "3"%}selected{%endif%}}
+            >3º Ano</option>
+
         </select>
     </div>
 </div>
 
 <div class="item">
-    <div>Peso (kg)</div>
+    <div>Carga horária semanal</div>
     <div>
         <input 
             type="number" 
-            name="weight" 
-            value="{{ student.weight }}">
+            name="workload" 
+            value="{{ student.workload }}">
     </div>
 </div>
 
-<div class="item">
-    <div>Altura (cm)</div>
-    <div>
-        <input 
-            type="number" 
-            name="height" 
-            value="{{ student.height }}">
-    </div>
-</div>
 
-{# o submit é para enviar para o servidor  #}
 <button type="submit">Salvar</button>

@@ -212,7 +212,6 @@ tbody tr td:last-child a:hover,
     background-color: var(--color-orange);
 }
 
-/* TABELA - index instructors */
 .table-container {
     display: block;
     padding: 40px;
@@ -244,8 +243,6 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* configurando imagem de avatar na tabela */
-/* :first-child primero filho */
 tbody tr td:first-child {
     display: grid;
     grid-template-columns: 64px 1fr;

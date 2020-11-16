@@ -26,8 +26,3 @@ routes.delete("/students", students.delete)
 
 module.exports = routes
 
-// http verbs
-// get: receber RESOURCE
-// post: criar um novo resource com dados enviados 
-// put: atualizar resource
-// delete: deletar resource
