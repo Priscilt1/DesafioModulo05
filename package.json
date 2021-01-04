@@ -1,12 +1,12 @@
 {
-  "name": "desafiomodulo04",
+  "name": "desafiomodulo05",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
-    "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public,views'"
+    "nodemon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public,src/spp/views'"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
