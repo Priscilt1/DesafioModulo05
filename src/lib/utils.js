@@ -1,5 +1,5 @@
 module.exports = {
-  age: function (timestamp) {
+  age(timestamp) {
     const today = new Date();
     const birthDate = new Date(timestamp);
 
@@ -13,7 +13,7 @@ module.exports = {
     return age;
   },
 
-  date: function(timestamp) {
+  date(timestamp) {
     const date = new Date (timestamp)  
 
 
@@ -30,7 +30,7 @@ module.exports = {
     }
   },
 
-  graduation: function(schooling) {
+  graduation(schooling) {
     const graduations = {
       "EM": "Ensino Médio Completo",
       "ES": "Ensino Superior Completo",
@@ -42,7 +42,7 @@ module.exports = {
   },
 
   
-  grade: function(schoolyear) {
+  grade(schoolyear) {
     const grades = {
       "5": "5º Ano",
       "6": "6º Ano",
