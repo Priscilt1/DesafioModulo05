@@ -19,8 +19,8 @@
                     <td><span style="background-image: url({{teacher.avatar_url}})"></span>
                         {{teacher.name}}</td>   
                         <td> 
-                            {% for service in teacher.services.split(",")%} 
-                            <div id="td-services">{{service}} </div>  
+                            {% for class_type in teacher.class_type.split(",")%} 
+                            <div id="td-class_types">{{class_type}} </div>  
                             {% endfor %} </td>                            
                     <td> <a href="/teachers/{{teacher.id}}">Ver detalhes</a> </td>
                 </tr>
