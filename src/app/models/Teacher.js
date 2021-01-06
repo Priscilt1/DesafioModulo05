@@ -5,7 +5,7 @@ const { age, date, graduation } = require('../../lib/utils')
 module.exports = {
     all(callback) {
         db.query(`SELECT * FROM teachers`, function(err, results){
-            if(err) throw "Erro no banco de dados!"
+            if(err) throw `Erro no banco de dados!${err}`
 
             callback(results.rows)
         })
@@ -35,7 +35,7 @@ module.exports = {
         ]
         
         db.query(query, values, function(err, results) {
-            if(err) throw "Erro no banco de dados!"
+            if(err) throw `Erro no banco de dados!${err}`
             callback(results.rows[0])
         })
 
@@ -74,9 +74,15 @@ module.exports = {
         ]
 
         db.query(query, values, function (err, results){
-            if(err) throw "Erro no banco de dados!"
+            if(err) throw `Erro no banco de dados!${err}`
             callback()
 
         })    
+    },
+    delete(id, callback) {
+        db.query(` DELETE FROM teachers WHERE id = $1`, [id], function(err, results){
+            if(err) throw `Erro no banco de dados!${err}`
+            return callback()
+        })
     }
 }
