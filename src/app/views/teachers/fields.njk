@@ -35,19 +35,19 @@
     <div>
         <select name="education_level">
             <option value="EM"
-            {% if teacher.education_level == "EM"%}selected{%endif%}}
+            {% if teacher.education_level == "EM"%}selected{%endif%}
             >Ensino Médio Completo</option>
 
              <option value="ES"
-            {% if teacher.education_level == "ES"%}selected{%endif%}}
+            {% if teacher.education_level == "ES"%}selected{%endif%}
             >Ensino Superior Completo</option>
 
              <option value="M"
-            {% if teacher.education_level == "M"%}selected{%endif%}}
+            {% if teacher.education_level == "M"%}selected{%endif%}
             >Mestrado</option>
 
              <option value="D"
-            {% if teacher.education_level == "D"%}selected{%endif%}}
+            {% if teacher.education_level == "D"%}selected{%endif%}
             >Doutorado</option>
         </select>
     </div>
@@ -61,7 +61,7 @@
                 type="radio" 
                 name="class_type" 
                 value="P" 
-                {% if teacher.gender == 'P'%} 
+                {% if teacher.class_type == 'P'%} 
                     checked=
                 {% endif %}> Presencial
         </span>
@@ -70,7 +70,7 @@
                 type="radio" 
                 name="class_type" 
                 value="D"
-                {% if teacher.gender == 'D'%} 
+                {% if teacher.class_type == 'D'%} 
                     checked=    
                 {% endif %}> Á distância
         </span>
