@@ -35,19 +35,19 @@
     <div>
         <select name="education_level">
             <option value="EM"
-            {% if teacher.schooling == "EM"%}selected{%endif%}}
+            {% if teacher.education_level == "EM"%}selected{%endif%}}
             >Ensino Médio Completo</option>
 
              <option value="ES"
-            {% if teacher.schooling == "ES"%}selected{%endif%}}
+            {% if teacher.education_level == "ES"%}selected{%endif%}}
             >Ensino Superior Completo</option>
 
              <option value="M"
-            {% if teacher.schooling == "M"%}selected{%endif%}}
+            {% if teacher.education_level == "M"%}selected{%endif%}}
             >Mestrado</option>
 
              <option value="D"
-            {% if teacher.schooling == "D"%}selected{%endif%}}
+            {% if teacher.education_level == "D"%}selected{%endif%}}
             >Doutorado</option>
         </select>
     </div>

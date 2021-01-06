@@ -8,7 +8,7 @@
         <thead> 
             <tr> 
                 <th>Professor</th>
-                <th>Acompanhamento</th>
+                <th>Aulas</th>
                 <th>Ação</th>
             </tr>
         </thead>
@@ -19,8 +19,8 @@
                     <td><span style="background-image: url({{teacher.avatar_url}})"></span>
                         {{teacher.name}}</td>   
                         <td> 
-                            {% for class_type in teacher.class_type.split(",")%} 
-                            <div id="td-class_types">{{class_type}} </div>  
+                            {% for subjects_taught in teacher.subjects_taught.split(",")%} 
+                            <div id="td-subjects_taughts">{{subjects_taught}} </div>  
                             {% endfor %} </td>                            
                     <td> <a href="/teachers/{{teacher.id}}">Ver detalhes</a> </td>
                 </tr>

@@ -6,7 +6,7 @@ module.exports = {
     // Pegando todos os resultados
     all(callback) {
         db.query(`SELECT * FROM teachers`, function(err, results){
-            if(err) return res.send("Erro no banco de dados!")
+            if(err) throw "Erro no banco de dados!"
 
             callback(results.rows)
         })
@@ -36,9 +36,19 @@ module.exports = {
         ]
         
         db.query(query, values, function(err, results) {
-            if(err) return res.send("Erro no banco de dados!")
+            if(err) throw "Erro no banco de dados!"
             callback(results.rows[0])
         })
 
+    },
+    find(id, callback) {
+        db.query(`
+            SELECT * 
+            FROM teachers 
+            WHERE id =$1`, [id], 
+            function(err, results) {
+                if(err) throw `Erro no banco de dados!${err}`
+                callback(results.rows[0])
+        })
     }
 }

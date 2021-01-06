@@ -1,5 +1,6 @@
 const Intl = require('intl')
 const Teacher = require('../models/Teacher')
+const { age, date, graduation } = require('../../lib/utils')
 
 
 module.exports = {
@@ -24,7 +25,18 @@ module.exports = {
         }) 
     },
     show(req, res) {
-        return
+        Teacher.find(req.params.id, function (teacher) {
+            if (!teacher) return res.send("Professor não encontrado!")
+
+            teacher.age = age(teacher.birth)
+            teacher.subjects_taught = teacher.subjects_taught.split(",")
+            teacher.created_at = date(teacher.created_at).format
+            teacher.education_level = graduation(teacher.education_level)
+
+            return res.render('teachers/show', {teacher})
+        })
+
+        
     },
     edit(req, res) {
         return
