@@ -4,7 +4,7 @@ const { age, date, graduation } = require('../../lib/utils')
 
 module.exports = {
     all(callback) {
-        db.query(`SELECT * FROM teachers`, function(err, results){
+        db.query(`SELECT * FROM teachers ORDER BY name ASC`, function(err, results){
             if(err) throw `Erro no banco de dados!${err}`
 
             callback(results.rows)

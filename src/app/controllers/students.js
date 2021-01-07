@@ -5,6 +5,7 @@ const Student = require('../models/Student')
 module.exports = {
     index(req, res) {
         Student.all(function(students){
+            console.log(students)
             return res.render("students/index", {students})
         })
     },
@@ -28,9 +29,7 @@ module.exports = {
             if (!student) return res.send("Professor não encontrado!")
 
             student.birth_date = date(student.birth_date).birthDay
-            // student.subjects_taught = student.subjects_taught.split(",")
-            // student.created_at = date(student.created_at).format
-            // student.education_level = graduation(student.education_level)
+    
 
             return res.render('students/show', {student})
         })
