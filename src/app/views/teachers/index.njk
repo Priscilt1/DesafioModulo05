@@ -9,7 +9,9 @@
             <tr> 
                 <th>Professor</th>
                 <th>Aulas</th>
+                <th>Alunos</th>
                 <th>Ação</th>
+
             </tr>
         </thead>
 
@@ -21,7 +23,9 @@
                         <td> 
                             {% for subjects_taught in teacher.subjects_taught.split(",")%} 
                             <div id="td-subjects_taughts">{{subjects_taught}} </div>  
-                            {% endfor %} </td>                            
+                            {% endfor %} 
+                        </td>
+                    <td> {{teacher.total_students}}                            
                     <td> <a href="/teachers/{{teacher.id}}">Ver detalhes</a> </td>
                 </tr>
             {% endfor%}

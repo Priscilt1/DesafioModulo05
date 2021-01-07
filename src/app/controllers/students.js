@@ -30,7 +30,6 @@ module.exports = {
 
             student.birth_date = date(student.birth_date).birthDay
     
-
             return res.render('students/show', {student})
         })
     },
@@ -39,8 +38,6 @@ module.exports = {
             if (!student) return res.send("Professor não encontrado!")
 
             student.birth_date = date(student.birth_date).iso
-            console.log(student)
-            console.log(student)
 
             return res.render('students/edit', {student})
         })

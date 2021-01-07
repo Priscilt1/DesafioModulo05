@@ -4,7 +4,13 @@ const { age, date, graduation } = require('../../lib/utils')
 
 module.exports = {
     all(callback) {
-        db.query(`SELECT * FROM teachers ORDER BY name ASC`, function(err, results){
+        db.query(`
+            SELECT teachers.*, count (students) AS total_students
+            FROM teachers
+            LEFT JOIN students ON (teachers.id = students.teacher_id)
+            GROUP BY teachers.id
+            ORDER BY total_students DESC`, 
+            function(err, results){
             if(err) throw `Erro no banco de dados!${err}`
 
             callback(results.rows)
