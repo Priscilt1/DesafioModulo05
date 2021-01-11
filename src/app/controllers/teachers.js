@@ -9,7 +9,8 @@ module.exports = {
 
         if (filter) {
             Teacher.findBy(filter, function(teachers){
-                return res.render("teachers/index", { teachers })
+                // esta passando o filter depois do teachers para manter a filtragem
+                return res.render("teachers/index", { teachers, filter })
             })
         } else {
             Teacher.all(function(teachers){

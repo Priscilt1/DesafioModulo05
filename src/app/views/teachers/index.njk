@@ -10,7 +10,9 @@
             <input 
                 type="text"
                 name="filter"
-                placeholder="Filtrar por nome"
+                placeholder="Nome ou aula"
+                {# para manter a filtragem #}
+                value={{filter}}
                 > 
 
             <button type="submit">Filtrar</button>
@@ -21,7 +23,7 @@
         <thead> 
             <tr> 
                 <th>Professor</th>
-                <th>Aulas</th>
+                <th>Aula</th>
                 <th>Alunos</th>
                 <th>Ação</th>
 
