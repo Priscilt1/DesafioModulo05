@@ -56,6 +56,21 @@ module.exports = {
                 callback(results.rows[0])
         })
     },
+    findBy (filter, callback){
+        db.query(`
+        SELECT teachers.*, count (students) AS total_students
+        FROM teachers
+        LEFT JOIN students ON (teachers.id = students.teacher_id)
+        WHERE teachers.name ILIKE '%${filter}%'
+        GROUP BY teachers.id
+        ORDER BY total_students DESC`, 
+        function(err, results){
+        if(err) throw `Erro no banco de dados!${err}`
+
+        callback(results.rows)
+        // o ILIKE fitra. Coloca a porcentagem para que seja flexivel na hora da procura e não busque apenas se o nome estiver completo
+    })
+    },
     // update = atualização/edicao do dado. O Where é muito importante para que nao atualize todos os dados, mas sim apenas o id indicado 
     update(data, callback) {
         const query = `
