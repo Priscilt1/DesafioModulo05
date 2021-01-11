@@ -58,15 +58,15 @@ module.exports = {
     },
     findBy (filter, callback){
         db.query(`
-        SELECT teachers.*, count (students) AS total_students
-        FROM teachers
-        LEFT JOIN students ON (teachers.id = students.teacher_id)
-        WHERE teachers.name ILIKE '%${filter}%'
-        OR teachers.subjects_taught ILIKE '%${filter}%'
-        GROUP BY teachers.id
-        ORDER BY total_students DESC`, 
-        function(err, results){
-        if(err) throw `Erro no banco de dados!${err}`
+            SELECT teachers.*, count (students) AS total_students
+            FROM teachers
+            LEFT JOIN students ON (teachers.id = students.teacher_id)
+            WHERE teachers.name ILIKE '%${filter}%'
+            OR teachers.subjects_taught ILIKE '%${filter}%'
+            GROUP BY teachers.id
+            ORDER BY total_students DESC`, 
+            function(err, results){
+            if(err) throw `Erro no banco de dados!${err}`
 
         callback(results.rows)
         // o ILIKE fitra. Coloca a porcentagem para que seja flexivel na hora da procura e não busque apenas se o nome estiver completo
@@ -106,5 +106,8 @@ module.exports = {
             if(err) throw `Erro no banco de dados!${err}`
             return callback()
         })
+    },
+    paginate(params) {
+        
     }
 }

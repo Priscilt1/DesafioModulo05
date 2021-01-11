@@ -5,18 +5,37 @@ const { age, date, graduation } = require('../../lib/utils')
 
 module.exports = {
     index(req, res) {
-        const {filter} = req.query
+        let {filter, page, limit} = req.query
 
-        if (filter) {
-            Teacher.findBy(filter, function(teachers){
-                // esta passando o filter depois do teachers para manter a filtragem
-                return res.render("teachers/index", { teachers, filter })
-            })
-        } else {
-            Teacher.all(function(teachers){
-                return res.render("teachers/index", {teachers})
-            })
+        // PAGINAÇÃO
+        // a condicional page é igual a page ou 1. Considerando que pode haver paginacao ou nao 
+        page = page || 1
+        limit = limit || 2
+        // A partir do limit para pular o numero exato de dados por paginação
+        let offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(instructors) {
+
+            }
         }
+
+        Instructor.paginate(params)
+
+        // if (filter) {
+        //     Teacher.findBy(filter, function(teachers){
+        //         // esta passando o filter depois do teachers para manter a filtragem
+        //         return res.render("teachers/index", { teachers, filter })
+        //     })
+        // } else {
+        //     Teacher.all(function(teachers){
+        //         return res.render("teachers/index", {teachers})
+        //     })
+        // }
     },
     create(req, res) {
         return res.render ('teachers/create')
