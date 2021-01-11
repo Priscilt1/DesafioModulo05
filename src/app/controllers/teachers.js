@@ -19,17 +19,17 @@ module.exports = {
             page,
             limit,
             offset,
-            callback(instructors) {
-
+            callback(teachers) {
+                // esta passando o filter depois do teachers para manter a filtragem
+                return res.render("teachers/index", { teachers, filter })
             }
         }
 
-        Instructor.paginate(params)
+        Teacher.paginate(params)
 
         // if (filter) {
         //     Teacher.findBy(filter, function(teachers){
-        //         // esta passando o filter depois do teachers para manter a filtragem
-        //         return res.render("teachers/index", { teachers, filter })
+        //         
         //     })
         // } else {
         //     Teacher.all(function(teachers){
