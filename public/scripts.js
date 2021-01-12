@@ -8,7 +8,7 @@ for (item of menuItems) {
     } 
 }
 
-// Pagjinacao
+// Paginacao
 let totalPages = 20,
     selectedPage = 15,
     pages = []
