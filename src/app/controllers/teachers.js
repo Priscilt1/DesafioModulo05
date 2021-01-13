@@ -20,6 +20,13 @@ module.exports = {
             limit,
             offset,
             callback(teachers) {
+                
+                const pagination = {
+                    filter,
+                    total, 
+                    page
+                }
+
                 // esta passando o filter depois do teachers para manter a filtragem
                 return res.render("teachers/index", { teachers, filter })
             }
@@ -27,15 +34,7 @@ module.exports = {
 
         Teacher.paginate(params)
 
-        // if (filter) {
-        //     Teacher.findBy(filter, function(teachers){
-        //         
-        //     })
-        // } else {
-        //     Teacher.all(function(teachers){
-        //         return res.render("teachers/index", {teachers})
-        //     })
-        // }
+        
     },
     create(req, res) {
         return res.render ('teachers/create')
