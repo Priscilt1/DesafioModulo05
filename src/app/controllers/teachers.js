@@ -23,7 +23,8 @@ module.exports = {
                 
                 const pagination = {
                     filter,
-                    total, 
+                    // o math para arrendar pra cima o total de pagina
+                    total: Math.ceil(teachers[0].total / limit), 
                     page
                 }
 
