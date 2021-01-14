@@ -41,6 +41,7 @@ function paginate (selectedPage, totalPages) {
 
 const pagination = document.querySelector(".pagination")
 // o + serve para transformar em numero o dado que sera mostrado na pagina
+const filter = pagination.dataset.filter
 const page = +pagination.dataset.page
 const total = +pagination.dataset.total
 const pages = paginate(page, total)
@@ -54,7 +55,11 @@ for (let page of pages) {
         // para tirar o underline das reticencias dando acesso ao clicar do mouse
         elements += `<span>${page}</span>`
     } else {
-        elements += `<a href="?page=${page}">${page}</a>`
+        if (filter) {
+            elements += `<a href="?page=${page}&filter=${filter}">${page}</a>`
+        } else {
+            elements += `<a href="?page=${page}">${page}</a>`
+        }
     }
 }
 
