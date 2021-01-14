@@ -29,7 +29,7 @@ module.exports = {
                 }
 
                 // esta passando o filter depois do teachers para manter a filtragem
-                return res.render("teachers/index", { teachers, filter })
+                return res.render("teachers/index", { teachers, filter, pagination })
             }
         }
 

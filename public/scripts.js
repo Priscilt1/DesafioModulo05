@@ -11,7 +11,7 @@ for (item of menuItems) {
 
 function paginate (selectedPage, totalPages) {
     let pages = [],
-    oldPage
+        oldPage
 
     for (let currentPage = 1; currentPage<= totalPages; currentPage++) {
     
@@ -45,4 +45,18 @@ const page = +pagination.dataset.page
 const total = +pagination.dataset.total
 const pages = paginate(page, total)
 
-console.log(pages)
+console.log(pages, total, page)
+
+let elements = ""
+
+for (let page of pages) {
+    if(String(page).includes("...")) {
+        // para tirar o underline das reticencias dando acesso ao clicar do mouse
+        elements += `<span>${page}</span>`
+    } else {
+        elements += `<a href="?page=${page}">${page}</a>`
+    }
+}
+
+// inserindo o html
+pagination.innerHTML = elements
