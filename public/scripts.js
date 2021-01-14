@@ -10,12 +10,10 @@ for (item of menuItems) {
 
 
 function paginate (selectedPage, totalPages) {
-    let totalPages = 25,
-    selectedPage = 15,
-    pages = [],
+    let pages = [],
     oldPage
 
-    for(let currentPage =1; currentPage<= totalPages; currentPage++) {
+    for (let currentPage = 1; currentPage<= totalPages; currentPage++) {
     
         const firstAndLastPage = currentPage == 1 || currentPage == totalPages
         const secondPage = currentPage == 2 
@@ -23,12 +21,12 @@ function paginate (selectedPage, totalPages) {
         const pagesAfterSelectedPage = currentPage <= selectedPage +1
         const pagesBeforeSelectedPage = currentPage >= selectedPage -1
         
-        if(firstAndLastPage || pagesBeforeSelectedPage && pagesAfterSelectedPage || secondPage || penultimatePage) {
+        if (firstAndLastPage || pagesBeforeSelectedPage && pagesAfterSelectedPage || secondPage || penultimatePage) {
             if(oldPage && currentPage - oldPage >2) {
                 pages.push("...")
             }
 
-            if(oldPage && currentPage - oldPage ==2) {
+            if (oldPage && currentPage - oldPage ==2) {
                 pages.push(oldPage + 2)
             }
             
@@ -45,3 +43,6 @@ const pagination = document.querySelector(".pagination")
 // o + serve para transformar em numero o dado que sera mostrado na pagina
 const page = +pagination.dataset.page
 const total = +pagination.dataset.total
+const pages = paginate(page, total)
+
+console.log(pages)
