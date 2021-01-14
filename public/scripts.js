@@ -41,11 +41,10 @@ function paginate (selectedPage, totalPages) {
 
 function createPagination (pagination) {
     const filter = pagination.dataset.filter
-    const page = +pagination.dataset.page
+    const currentPage = +pagination.dataset.page
     const total = +pagination.dataset.total
-    const pages = paginate(page, total)
+    const pages = paginate(currentPage, total)
 
-    console.log(pages, total, page)
 
     let elements = ""
 
@@ -54,10 +53,11 @@ function createPagination (pagination) {
             // para tirar o underline das reticencias dando acesso ao clicar do mouse
             elements += `<span>${page}</span>`
         } else {
+            const activeClass = page === currentPage ? `active`: ""
             if (filter) {
-                elements += `<a href="?page=${page}&filter=${filter}">${page}</a>`
+                elements += `<a href="?page=${page}&filter=${filter}" class="${activeClass}">${page}</a>`
             } else {
-                elements += `<a href="?page=${page}">${page}</a>`
+                elements += `<a href="?page=${page}" class="${activeClass}">${page}</a>`
             }
         }
     }

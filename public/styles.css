@@ -292,28 +292,6 @@ td:last-child {
     text-align: center;
 }
 
-    /* background: var(--color-yellow);
-    border-radius: 16px;
-    color: #777;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 8px 16px;
-    text-align: center;
-    display: inline-block;
-} */
-
-/* .td_email {
-    background: var(--color-yellow);
-    border-radius: 16px;
-    color: #777;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 8px 16px;
-    text-align: center;
-    display: inline-block;
-} */
 
 /* FILTERS */
 .table-container .header {
@@ -370,8 +348,9 @@ td:last-child {
     margin-right: 16px;
 }
 
-.pagination a:hover {
+.pagination a:hover,
+.pagination .active {
     color: var(--color-green);
-    border-bottom: 2px solid var(--color-yellow);
+    border-bottom: 2px solid var(--color-orange);
     transition: 200ms;
 }
