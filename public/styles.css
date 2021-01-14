@@ -122,7 +122,6 @@ header {
 .details .item div:nth-child(2) {
     color: #555;
     font-weight: bold;
-    font-size: 18px;
 }
 
 .details h3 {
@@ -131,7 +130,10 @@ header {
     color: var(--color-green);
 }
 
-.details .item span {
+.details .item span,
+/* .student_email, */
+.td-subjects_taughts
+{
     padding: 8px 16px;
     background-color: var(--color-yellow);
     border-radius: 16px;
@@ -290,8 +292,7 @@ td:last-child {
     text-align: center;
 }
 
-tbody #td-subjects_taughts {
-    background: var(--color-yellow);
+    /* background: var(--color-yellow);
     border-radius: 16px;
     color: #777;
     text-transform: uppercase;
@@ -300,7 +301,7 @@ tbody #td-subjects_taughts {
     padding: 8px 16px;
     text-align: center;
     display: inline-block;
-}
+} */
 
 /* .td_email {
     background: var(--color-yellow);

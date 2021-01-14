@@ -36,7 +36,10 @@
                 <tr>
                     <td><span style="background-image: url({{student.avatar_url}})"></span>
                         {{student.name}}</td>   
-                    <td class="td_email">{{student.email}}</td>                           
+                    <td> 
+                        <div class="td-subjects_taughts">{{student.email}} </div>  
+                    </td>
+
                     <td>{{student.schoolyear}}º</td>                           
                     <td> <a href="/students/{{student.id}}">Ver detalhes</a> </td>
                 </tr>
