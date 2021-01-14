@@ -39,29 +39,37 @@ function paginate (selectedPage, totalPages) {
     return pages 
 }
 
-const pagination = document.querySelector(".pagination")
-// o + serve para transformar em numero o dado que sera mostrado na pagina
-const filter = pagination.dataset.filter
-const page = +pagination.dataset.page
-const total = +pagination.dataset.total
-const pages = paginate(page, total)
+function createPagination (pagination) {
+    const filter = pagination.dataset.filter
+    const page = +pagination.dataset.page
+    const total = +pagination.dataset.total
+    const pages = paginate(page, total)
 
-console.log(pages, total, page)
+    console.log(pages, total, page)
 
-let elements = ""
+    let elements = ""
 
-for (let page of pages) {
-    if(String(page).includes("...")) {
-        // para tirar o underline das reticencias dando acesso ao clicar do mouse
-        elements += `<span>${page}</span>`
-    } else {
-        if (filter) {
-            elements += `<a href="?page=${page}&filter=${filter}">${page}</a>`
+    for (let page of pages) {
+        if(String(page).includes("...")) {
+            // para tirar o underline das reticencias dando acesso ao clicar do mouse
+            elements += `<span>${page}</span>`
         } else {
-            elements += `<a href="?page=${page}">${page}</a>`
+            if (filter) {
+                elements += `<a href="?page=${page}&filter=${filter}">${page}</a>`
+            } else {
+                elements += `<a href="?page=${page}">${page}</a>`
+            }
         }
     }
+
+    // inserindo o html
+    pagination.innerHTML = elements
 }
 
-// inserindo o html
-pagination.innerHTML = elements
+const pagination = document.querySelector(".pagination")
+// o + serve para transformar em numero o dado que sera mostrado na pagina
+
+
+if (pagination) {
+    createPagination(pagination)
+}
