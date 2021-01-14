@@ -69,9 +69,6 @@ module.exports = {
             if (!teacher) return res.send("Professor não encontrado!")
 
             teacher.birth_date = date(teacher.birth_date).iso
-            console.log(teacher)
-            // teacher.education_level = graduation(teacher.education_level)
-            console.log(teacher)
 
             return res.render('teachers/edit', {teacher})
         })
