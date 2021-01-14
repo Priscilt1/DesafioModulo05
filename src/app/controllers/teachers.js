@@ -10,7 +10,7 @@ module.exports = {
         // PAGINAÇÃO
         // a condicional page é igual a page ou 1. Considerando que pode haver paginacao ou nao 
         page = page || 1
-        limit = limit || 2
+        limit = limit || 4
         // A partir do limit para pular o numero exato de dados por paginação
         let offset = limit * (page - 1)
 

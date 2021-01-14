@@ -3,7 +3,23 @@
 
 {% block content %}
 <div class="card table-container">
-    <a href="/students/create">Novo</a>
+
+     <div class="header"> 
+        <a class="button" href="/students/create">Novo</a>
+        <form action ="/students" method="GET">
+            <input 
+                type="text"
+                name="filter"
+                placeholder="Nome ou ano escolar"
+                {# para manter a filtragem #}
+                value={{filter}}
+                > 
+
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+
+
     <table> 
         <thead> 
             <tr> 
@@ -20,15 +36,19 @@
                 <tr>
                     <td><span style="background-image: url({{student.avatar_url}})"></span>
                         {{student.name}}</td>   
-                    <td>{{student.email}}</td>                           
-                    <td>{{student.schoolyear}}</td>                           
-                           
-
+                    <td class="td_email">{{student.email}}</td>                           
+                    <td>{{student.schoolyear}}º</td>                           
                     <td> <a href="/students/{{student.id}}">Ver detalhes</a> </td>
                 </tr>
             {% endfor%}
         </tbody>
     </table>
+
+    <div class="pagination"
+        data-page={{pagination.page}}
+        data-total={{pagination.total}}
+        data-filter={{filter}}
+    ></div>
 
 
 </div>
