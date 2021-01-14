@@ -4,6 +4,7 @@
     --color-blue:#00afef;
     --color-green: #50dd5a;
     --color-orange: #e27c48;
+    --color-yellow: #ffdc64;
 }
 
 * {
@@ -132,7 +133,7 @@ header {
 
 .details .item span {
     padding: 8px 16px;
-    background-color: #ffdc64;
+    background-color: var(--color-yellow);
     border-radius: 16px;
     color: #777;
     margin-right: 4px;
@@ -290,7 +291,7 @@ td:last-child {
 }
 
 tbody #td-subjects_taughts {
-    background: #ffdc64;
+    background: var(--color-yellow);
     border-radius: 16px;
     color: #777;
     text-transform: uppercase;
@@ -329,4 +330,35 @@ tbody #td-subjects_taughts {
     border: 1px solid #eee;
     padding: 4px 8px;
     box-sizing: border-box;
+}
+
+/* pagination */
+.table-container {
+    display: grid;
+    /* configuracao da linhas e depois da coluna */
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--color-blue);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    color: var(--color-green);
+    border-bottom: 2px solid var(--color-yellow);
+    transition: 200ms;
 }
