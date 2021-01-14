@@ -9,7 +9,7 @@ for (item of menuItems) {
 }
 
 
-function pagination (selectedPage, totalPages) {
+function paginate (selectedPage, totalPages) {
     let totalPages = 25,
     selectedPage = 15,
     pages = [],
@@ -40,3 +40,8 @@ function pagination (selectedPage, totalPages) {
 
     return pages 
 }
+
+const pagination = document.querySelector(".pagination")
+// o + serve para transformar em numero o dado que sera mostrado na pagina
+const page = +pagination.dataset.page
+const total = +pagination.dataset.total
