@@ -16,11 +16,12 @@ Já a pagina dos Estudantes, tem as mesmas funcionalidades dos botões e filtro 
 
 ![student_index](https://user-images.githubusercontent.com/58517014/104731729-e5bbfa00-571a-11eb-8bac-4402a1ee8f3a.png)
 
-Com o filtro aplicado.
+Com o filtro aplicado que busca pelo o nome ou aula na area do professor e nome ou ano escolar na area do aluno
 ![teacher_filter](https://user-images.githubusercontent.com/58517014/104731992-46e3cd80-571b-11eb-8228-92a79d403e02.png)
 
 
 <ul> <b> Página detalhes  </b> </ul>
+A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deletar. 
 <ul> <b> Página Editar - Index </b> </ul>
 <ul> <b> Página criar um novo cadastro </b> </ul>
 
