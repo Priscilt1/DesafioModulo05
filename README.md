@@ -31,9 +31,12 @@ A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deleta
 
 
 <ul> <b> Página Editar </b> </ul>
-![page_edit](https://user-images.githubusercontent.com/58517014/104755835-bcf72d00-5739-11eb-99be-85a76ba7af5d.png)
+<img src="https://user-images.githubusercontent.com/58517014/104755835-bcf72d00-5739-11eb-99be-85a76ba7af5d.png"
 
 <ul> <b> Página criar um novo cadastro </b> </ul>
+E por fim, a pagina de cadastro com a galeria randomica
+![created](https://user-images.githubusercontent.com/58517014/104756619-cd5bd780-573a-11eb-9325-e51036d472ad.png)
+
 
 
 ### Autora
