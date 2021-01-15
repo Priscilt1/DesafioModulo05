@@ -14,11 +14,11 @@ A pagina inicial dos Professores permite visualizar quem esta cadastrado, exbili
 
 Já a pagina dos Estudantes, tem as mesmas funcionalidades dos botões e filtro mencionadas anteriormente, mudando apenas os detalhes de exibição do perfil. 
 
+![student_index](https://user-images.githubusercontent.com/58517014/104731729-e5bbfa00-571a-11eb-8bac-4402a1ee8f3a.png)
 
-<ul> <b> Página inicial - Index </b> </ul>
-<ul> <b> Página inicial - Index </b> </ul>
-<ul> <b> Página inicial - Index </b> </ul>
-<ul> <b> Página inicial - Index </b> </ul>
+<ul> <b> Página detalhes  </b> </ul>
+<ul> <b> Página Editar - Index </b> </ul>
+<ul> <b> Página criar um novo cadastro </b> </ul>
 
 
 
