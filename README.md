@@ -1,7 +1,14 @@
 
 <h1 align="center"> Desafio Modulo 05 🚀</h1>
 
+<h4 align="center"> 
+   Status do Projeto: <b> Concluido ✅ </b>
+</h4>
+
+
 <p align="center"> <b> Trabalhando com banco de dados e SQL, usando como base o desafio 04. </b> </p>
+
+
 
 <p align="justify"> Esse desafio foi proposto no LaunchBase pela a Rocketseat. Trata-se de um gerenciador escolar, sendo dividida em duas areas: <i> Professores e Estudantes </i>
 onde é composto pela:  </p>
@@ -27,6 +34,16 @@ A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deleta
 
 <ul> <b> Página criar um novo cadastro </b> </ul>
 
+
+### Autora
+---
+
+ <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/58517014?s=460&u=f92dd89c212d6fab1a67a1ca201511a1e2ba18e9&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Priscila Ribeiro</b></sub></a>
+
+
+Feito com ❤️ por Priscila Ribeiro 👋🏽 
 
 
 
