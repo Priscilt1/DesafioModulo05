@@ -8,9 +8,10 @@ onde é composto pela:  </p>
 
 
 <ul> <b> Página inicial - Index </b> </ul>
-A pagina inicial dos Professores permite visualizar quem esta cadastrado, exbilindo seu o avatar, nome, aula e a quantidade de aluno que o docente tem. Além disso, a tela conta com o botão para um novo cadastro, ver detalhes e aplicar filtro. Tambem vale salientar, que tem o recurso visual para mostrar em qual pagina que o usuario esta. 
+A pagina inicial Professores, permite visualizar quem esta cadastrado, exbilindo seu o avatar, nome, aula e a quantidade de aluno que o docente tem. Além disso, a tela conta com o botão para um novo cadastro, ver detalhes e aplicar filtro. Tambem vale salientar, que tem o recurso visual para mostrar em qual pagina que o usuario esta. 
 
-Já a pagina dos Estudantes, tem as mesmas funcionalidades dos botões e filtro mencionadas anteriormente, mudando apenas os detalhes de exibição do perfil. 
+Já a pagina dos <b>Estudantes, tem as mesmas funcionalidades dos botões e filtro mencionadas anteriormente, mudando apenas os detalhes de exibição do perfil. 
+![Captura de Tela 2021-01-15 às 10 38 33](https://user-images.githubusercontent.com/58517014/104733692-d8ecd580-571d-11eb-961b-3831793bbc29.png)
 
 
 Com o filtro aplicado que busca pelo o nome ou aula na area do professor e nome ou ano escolar na area do aluno
@@ -19,6 +20,7 @@ Com o filtro aplicado que busca pelo o nome ou aula na area do professor e nome 
 
 <ul> <b> Página detalhes  </b> </ul>
 A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deletar. 
+<img scr="https://user-images.githubusercontent.com/58517014/104732810-819a3580-571c-11eb-8e14-b0f86cc176c2.png" height="150" width="150">
 
 
 <ul> <b> Página Editar - Index </b> </ul>
