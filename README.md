@@ -20,7 +20,7 @@ Com o filtro aplicado que busca pelo o nome ou aula na area do professor e nome 
 
 <ul> <b> Página detalhes  </b> </ul>
 A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deletar. 
-
+<img src="https://user-images.githubusercontent.com/58517014/104734806-8ca29500-571f-11eb-9f64-480fe9f6c4a6.png"
 
 
 <ul> <b> Página Editar </b> </ul>
