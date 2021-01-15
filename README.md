@@ -10,7 +10,7 @@
 
 
 
-<p align="justify"> Esse desafio foi proposto no LaunchBase pela a Rocketseat. Trata-se de um gerenciador escolar, sendo dividida em duas areas: <i> Professores e Estudantes </i>
+<p align="justify"> Esse desafio foi proposto no LaunchBase pela a Rocketseat. Trata-se de um gerenciador escolar, sendo dividido em duas areas: <i> Professores e Estudantes </i>
 onde é composto pela:  </p>
 
 
@@ -31,6 +31,7 @@ A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deleta
 
 
 <ul> <b> Página Editar </b> </ul>
+![page_edit](https://user-images.githubusercontent.com/58517014/104755835-bcf72d00-5739-11eb-99be-85a76ba7af5d.png)
 
 <ul> <b> Página criar um novo cadastro </b> </ul>
 
