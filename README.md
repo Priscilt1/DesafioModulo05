@@ -6,7 +6,7 @@
 </h4>
 
 
-<p align="center"> <b> Trabalhando com banco de dados e SQL, usando como base o desafio 04. </b> </p>
+<p align="center"> <b> Trabalhando com banco de dados, usando como base o desafio 04. </b> </p>
 
 
 
