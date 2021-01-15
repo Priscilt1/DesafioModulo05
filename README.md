@@ -24,10 +24,9 @@ A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deleta
 
 
 <ul> <b> Página Editar </b> </ul>
-<img scr="https://user-images.githubusercontent.com/58517014/104735382-44d03d80-5720-11eb-9136-6611eae5bbd2.png"> 
 
 <ul> <b> Página criar um novo cadastro </b> </ul>
-![created](https://user-images.githubusercontent.com/58517014/104736821-4438a680-5722-11eb-8d9e-dc833c1ead18.png)
+
 
 
 
