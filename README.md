@@ -34,11 +34,11 @@ A pagina detalhes, mostra os dados do cadastro com o recurso de editar ou deleta
 <img src="https://user-images.githubusercontent.com/58517014/104755835-bcf72d00-5739-11eb-99be-85a76ba7af5d.png"
 
 <ul> <b> Página criar um novo cadastro </b> </ul>
-E por fim, a pagina de cadastro com a galeria randomica
+<p>E por fim, a pagina de cadastro com a galeria randomica</p>
 <img src="https://user-images.githubusercontent.com/58517014/104756619-cd5bd780-573a-11eb-9325-e51036d472ad.png"
 
 
-### Autora
+<h2> Autora </h2>
 ---
 
  <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/58517014?s=460&u=f92dd89c212d6fab1a67a1ca201511a1e2ba18e9&v=4" width="100px;" alt=""/>
@@ -46,7 +46,7 @@ E por fim, a pagina de cadastro com a galeria randomica
  
 
 
-Feito com ❤️ por <b>Priscila Ribeiro</b></a>
+Feito com ❤️  <br> por <b>Priscila Ribeiro</b>
 
 
 
